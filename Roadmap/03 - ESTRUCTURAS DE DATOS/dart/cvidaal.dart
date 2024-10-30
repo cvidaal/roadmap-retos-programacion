@@ -8,100 +8,100 @@ import 'dart:io';
 
 void main(){
 
-  // // En Dart existen diferentes estructuras de datos soportadas
-  // // List, Map, Set <-- Todas estas tienen en común que pueden recoger diferentes estilos de datos
+  // En Dart existen diferentes estructuras de datos soportadas
+  // List, Map, Set <-- Todas estas tienen en común que pueden recoger diferentes estilos de datos
 
-  // //* Listas
-  // List<String> alumnos = ['Pedro', 'Fernando', 'Juan', 'Lucia', 'Carlos'];
+  //* Listas
+  List<String> alumnos = ['Pedro', 'Fernando', 'Juan', 'Lucia', 'Carlos'];
 
-  // // Acceder a un elemento
-  // print(alumnos[0]); // Pedro
+  // Acceder a un elemento
+  print(alumnos[0]); // Pedro
 
-  // //Añadir a la lista
-  // alumnos.add('Eulices'); // <-- Agregamos un nuevo alumno
+  //Añadir a la lista
+  alumnos.add('Eulices'); // <-- Agregamos un nuevo alumno
 
-  // //Añadir múltiples datos
-  // alumnos.addAll(['Pepe', 'Francisco']); // <-- Se añaden tantos como pongas.
+  //Añadir múltiples datos
+  alumnos.addAll(['Pepe', 'Francisco']); // <-- Se añaden tantos como pongas.
 
-  // //Eliminar un elemento
-  // var alumnoEliminado = alumnos.indexOf('Pepe'); // <-- IndexOf busca en la lista (por nombre, posición...) y retorna la posición
-  // print(alumnoEliminado); // 6
-  // alumnos.removeAt(alumnoEliminado); // <-- Se elimina Pepe (es de tipo int porque devuelve la posición)
+  //Eliminar un elemento
+  var alumnoEliminado = alumnos.indexOf('Pepe'); // <-- IndexOf busca en la lista (por nombre, posición...) y retorna la posición
+  print(alumnoEliminado); // 6
+  alumnos.removeAt(alumnoEliminado); // <-- Se elimina Pepe (es de tipo int porque devuelve la posición)
 
-  // // Eliminar todos los elementos
-  // //!alumnos.clear(); // <-- Vacía la lista
+  // Eliminar todos los elementos
+  //!alumnos.clear(); // <-- Vacía la lista
   
-  // // Ordenar los elementos
-  // alumnos.sort();// Los ordena por orden alfacebeitoc si son string y sino de menor a mayor
-  // alumnos.sort((a, b) => a.length.compareTo(b.length),); // Los ordena según su longitud de caracteres
+  // Ordenar los elementos
+  alumnos.sort();// Los ordena por orden alfacebeitoc si son string y sino de menor a mayor
+  alumnos.sort((a, b) => a.length.compareTo(b.length),); // Los ordena según su longitud de caracteres
 
-  // print(alumnos);
+  print(alumnos);
 
-  // //* Sets
-  // // Los sets no permiten que se repitan valores
-  // Set numeros = {2, 3, 4, 'Pepe', 'Carlos', 10, 11, 12.3, 145, true, false}; // <-- Los sets pueden almacenar cualquier tipo de datos
+  //* Sets
+  // Los sets no permiten que se repitan valores
+  Set numeros = {2, 3, 4, 'Pepe', 'Carlos', 10, 11, 12.3, 145, true, false}; // <-- Los sets pueden almacenar cualquier tipo de datos
   
-  // // Añadir nuevo item
-  // numeros.add(100);
+  // Añadir nuevo item
+  numeros.add(100);
 
-  // // Añadir más de 1 item
-  // numeros.addAll([50, 'Marta', false]);
+  // Añadir más de 1 item
+  numeros.addAll([50, 'Marta', false]);
 
-  // // Eliminar un item
-  // numeros.remove('Carlos');
+  // Eliminar un item
+  numeros.remove('Carlos');
 
-  // //Set.from(numeros); // <-- Constructor para crear Sets.
+  //Set.from(numeros); // <-- Constructor para crear Sets.
 
-  // // Saber si contiene un valor
-  // print(numeros.contains('Pepe')); // true
+  // Saber si contiene un valor
+  print(numeros.contains('Pepe')); // true
 
-  // print(numeros.containsAll(['Pepe', 3, 4, 30])); // false el 30 no esta.
+  print(numeros.containsAll(['Pepe', 3, 4, 30])); // false el 30 no esta.
 
-  // print(numeros);
+  print(numeros);
 
-  // //* Maps
+  //* Maps
 
-  // // Un mapa funciona del modo key : value
-  // Map<String, dynamic> asignaturas = {
-  //   'Programacion' : [9, 2, 4, 5, 6, 8],
-  //   'Desarrollo Interfaces': [3, 4, 5, 1, 2, 9],
-  //   'Empresas': [10, 9, 8, 8, 5, 6],
-  //   'Programacion de Servicios': [3, 4, 1, 2, 10, 10],
-  //   'No presentado' : 2
-  // };
+  // Un mapa funciona del modo key : value
+  Map<String, dynamic> asignaturas = {
+    'Programacion' : [9, 2, 4, 5, 6, 8],
+    'Desarrollo Interfaces': [3, 4, 5, 1, 2, 9],
+    'Empresas': [10, 9, 8, 8, 5, 6],
+    'Programacion de Servicios': [3, 4, 1, 2, 10, 10],
+    'No presentado' : 2
+  };
 
-  // // Agregar una clave
-  // asignaturas['Sistemas de gestión'] = [1, 0, 9, 5, 3, 2];
-  // asignaturas['Presentado'] = 30;
+  // Agregar una clave
+  asignaturas['Sistemas de gestión'] = [1, 0, 9, 5, 3, 2];
+  asignaturas['Presentado'] = 30;
 
-  // // Eliminar elemento
-  // asignaturas.remove('Presentado');
+  // Eliminar elemento
+  asignaturas.remove('Presentado');
 
-  // // Limpiar el mapa
-  // //asignaturas.clear();
+  // Limpiar el mapa
+  //asignaturas.clear();
 
-  // // Verificar si contiene una clave o valor
-  // print(asignaturas.containsKey('No presentado')); // true
-  // print(asignaturas.containsValue(1)); // true
+  // Verificar si contiene una clave o valor
+  print(asignaturas.containsKey('No presentado')); // true
+  print(asignaturas.containsValue(1)); // true
 
-  // //Obtener el valor de una clave 
-  // var noPresentados = asignaturas['No presentado']; // No Presentados
-  // print('Hay $noPresentados No presentados');
+  //Obtener el valor de una clave 
+  var noPresentados = asignaturas['No presentado']; // No Presentados
+  print('Hay $noPresentados No presentados');
 
-  // //Obtener el número de elementos
-  // asignaturas.length;
+  //Obtener el número de elementos
+  asignaturas.length;
 
-  // // Recorrer un mapa
-  // asignaturas.forEach((key, value) {
-  //   if(key == 'No presentado') return;
-  //   print('En $key se han sacado las siguientes notas $value ');
-  // },);
+  // Recorrer un mapa
+  asignaturas.forEach((key, value) {
+    if(key == 'No presentado') return;
+    print('En $key se han sacado las siguientes notas $value ');
+  },);
 
-  // for(var entries in asignaturas.entries){
-  //   print('{${entries.key} se han sacado las siguientes notas ${entries.value}');
-  // }
+  for(var entries in asignaturas.entries){
+    print('{${entries.key} se han sacado las siguientes notas ${entries.value}');
+  }
 
-  // print(asignaturas);
+  print(asignaturas);
 
 //    * DIFICULTAD EXTRA (opcional):
 //  * Crea una agenda de contactos por terminal.
