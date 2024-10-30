@@ -187,7 +187,7 @@ try {
 //  *
 for (int i = 10; i<=55; i++){
   if ((i == 16) || (i%2 != 0) || (i%3 == 0) ){
-    continue; // <-- Esto hace que no se imprima
+    continue; // <-- Esto hace que no se imprimaz
   }
   print(i);
 }
